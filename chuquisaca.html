@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Turismo Bolivia — Potosí</title>
+  <meta name="description" content="Descubre Potosí: Cerro Rico, historia colonial y maravillas naturales.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#f7fafc; --card:#ffffff; --accent:#b91c1c; --muted:#6b7280; --glass: rgba(255,255,255,0.6);
+      --radius:14px; --pad:18px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0; font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+      background:linear-gradient(180deg,#fef2f2 0%, var(--bg) 60%); color:#0f172a;
+      -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+    }
+    header{position:sticky; top:0; backdrop-filter:blur(6px); background:rgba(255,255,255,0.6); border-bottom:1px solid rgba(15,23,42,0.04); z-index:50;}
+    .container{max-width:1100px; margin:0 auto; padding:20px;}
+    .nav{display:flex; align-items:center; justify-content:space-between;}
+    .brand{font-weight:800; letter-spacing:-0.4px}
+    nav a{margin-left:14px; font-weight:600; color:#7f1d1d}
+    .hero{display:grid; grid-template-columns:1fr; gap:18px; padding:44px 20px; border-radius:14px; background:linear-gradient(135deg, rgba(185,28,28,0.06), rgba(185,28,28,0.02));}
+    .hero h1{font-size:clamp(26px,6vw,42px); margin:0 0 6px; line-height:1.02}
+    .hero p{margin:0; color:var(--muted)}
+    .btn{display:inline-block;padding:10px 16px;border-radius:10px;font-weight:700;background:var(--accent);color:white;text-decoration:none}
+    .card{background:var(--card); border-radius:12px; overflow:hidden; box-shadow: 0 6px 18px rgba(2,6,23,0.06); display:flex; flex-direction:column}
+    .card img{width:100%; height:200px; object-fit:cover; display:block}
+    .card-body{padding:14px}
+    .meta{font-size:13px;color:var(--muted); margin-top:6px}
+    footer{padding:28px 20px; color:var(--muted); margin-top:28px; text-align:center}
+    .gallery{display:grid; grid-template-columns:repeat(2,1fr); gap:8px}
+    .gallery img{width:100%; height:140px; object-fit:cover; border-radius:8px}
+    form input, form textarea{width:100%; padding:10px 12px; border-radius:8px; border:1px solid #e6eef0; margin-top:8px; font-size:14px;}
+    @media(min-width:720px){
+      .hero{grid-template-columns:1fr 480px; padding:48px}
+      .gallery{grid-template-columns:repeat(4,1fr)}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div style="display:flex;align-items:center;gap:12px">
+        <div class="brand">Chuquisaca</div>
+        <div style="font-size:13px;color:var(--muted)">Historia · Plata · Altura</div>
+      </div>
+      <nav>
+        <a href="#lugares">Lugares</a>
+        <a href="#consejos">Consejos</a>
+        <a href="#galeria">Galería</a>
+        <a href="#contacto" class="btn" style="margin-left:10px">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container" style="padding-bottom:28px">
+    <!-- Hero -->
+    <section class="hero" aria-labelledby="hero-title-potosi">
+      <div>
+        <h1 id="hero-title-potosi">Potosí: riqueza histórica a más de 4000 msnm</h1>
+        <p>Famosa por el Cerro Rico, Potosí fue uno de los centros mineros más importantes del mundo en la colonia. Hoy combina patrimonio histórico, cultura y paisajes únicos.</p>
+
+        <div style="margin-top:12px">
+          <a class="btn" href="#lugares">Ver lugares</a>
+          <a class="btn" href="#galeria" style="background:transparent;color:var(--accent);border:1px solid rgba(15,23,42,0.06);margin-left:10px">Ver galería</a>
+        </div>
+
+        <div style="display:flex;gap:10px;margin-top:14px;flex-wrap:wrap">
+          <span style="background:var(--glass);padding:8px 12px;border-radius:999px;font-weight:600">Cerro Rico</span>
+          <span style="background:var(--glass);padding:8px 12px;border-radius:999px;font-weight:600">Casas Reales</span>
+          <span style="background:var(--glass);padding:8px 12px;border-radius:999px;font-weight:600">Lagunas Altiplánicas</span>
+        </div>
+      </div>
+
+      <div style="border-radius:16px; overflow:hidden; box-shadow:0 10px 30px rgba(2,6,23,0.08)">
+        <img src="img/POTOSI.jpg" alt="Cerro Rico de Potosí" style="width:100%;height:100%;max-height:420px;object-fit:cover;display:block">
+      </div>
+    </section>
+
+    <!-- Lugares -->
+    <section id="lugares" style="margin-top:28px">
+      <h2 style="margin:0 0 6px">Lugares destacados</h2>
+      <p style="margin:0 0 12px;color:var(--muted)">Descubre la historia colonial y maravillas naturales de Potosí.</p>
+
+      <div style="display:grid; gap:18px; margin-top:12px">
+        <article class="card" aria-label="Cerro Rico">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/4/4b/Cerro_Rico_de_Potos%C3%AD.jpg" alt="Cerro Rico">
+          <div class="card-body">
+            <strong>Cerro Rico</strong>
+            <div class="meta">Patrimonio · Minería</div>
+            <p style="margin-top:8px;color:var(--muted)">Símbolo de la ciudad, fuente de riqueza en la colonia y aún activo en la minería artesanal.</p>
+          </div>
+        </article>
+
+        <article class="card" aria-label="Casa de la Moneda">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/5/57/Casa_de_la_Moneda_de_Potos%C3%AD.jpg" alt="Casa de la Moneda">
+          <div class="card-body">
+            <strong>Casa de la Moneda</strong>
+            <div class="meta">Historia · Cultura</div>
+            <p style="margin-top:8px;color:var(--muted)">Museo histórico donde se acuñaba la plata que circuló en todo el mundo.</p>
+          </div>
+        </article>
+
+        <article class="card" aria-label="Laguna Colorada">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/f/fc/Laguna_Colorada-Bolivia.jpg" alt="Laguna Colorada">
+          <div class="card-body">
+            <strong>Laguna Colorada</strong>
+            <div class="meta">Naturaleza · Altiplano</div>
+            <p style="margin-top:8px;color:var(--muted)">Laguna rojiza con flamencos, ubicada en la Reserva Eduardo Avaroa.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+    <!-- Galería -->
+    <section id="galeria" style="margin-top:28px">
+      <h3 style="margin:0 0 6px">Galería</h3>
+      <p style="margin:0 0 12px;color:var(--muted)">Paisajes y monumentos de Potosí.</p>
+      <div class="gallery" style="margin-top:8px">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/4b/Cerro_Rico_de_Potos%C3%AD.jpg" alt="Cerro Rico">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/57/Casa_de_la_Moneda_de_Potos%C3%AD.jpg" alt="Casa de la Moneda">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/f/fc/Laguna_Colorada-Bolivia.jpg" alt="Laguna Colorada">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/9b/Potos%C3%AD_centro_hist%C3%B3rico.jpg" alt="Centro Histórico Potosí">
+      </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" style="margin-top:28px">
+      <h3 style="margin:0 0 6px">Contacto</h3>
+      <p style="margin:0 0 12px;color:var(--muted)">Envíanos tus dudas sobre tours, historia o reservas en Potosí.</p>
+      <form id="contact-form" style="background:var(--card); padding:16px; border-radius:12px; box-shadow:0 6px 18px rgba(2,6,23,0.04);">
+        <div style="display:flex;gap:12px;margin-bottom:10px">
+          <div style="flex:1">
+            <label>Nombre
+              <input type="text" name="nombre" placeholder="Tu nombre" required>
+            </label>
+          </div>
+          <div style="flex:1">
+            <label>Email
+              <input type="email" name="email" placeholder="correo@gmail.com" required>
+            </label>
+          </div>
+        </div>
+        <label>Asunto
+          <input type="text" name="asunto" placeholder="Reserva / Información" required>
+        </label>
+        <label>Mensaje
+          <textarea name="mensaje" rows="5" placeholder="¿En qué te podemos ayudar?" required></textarea>
+        </label>
+        <div style="margin-top:12px; display:flex; gap:8px; justify-content:flex-end">
+          <button type="reset" class="btn" style="background:transparent;color:var(--muted);border:1px solid rgba(15,23,42,0.06)">Limpiar</button>
+          <button type="submit" class="btn">Enviar</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap">
+      <small>© <span id="year-potosi"></span> Turismo Potosí — Historia y naturaleza</small>
+      <div style="display:flex;gap:12px;margin-top:8px">
+        <a href="#" aria-label="Términos">Términos</a>
+        <a href="#" aria-label="Privacidad">Privacidad</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year-potosi').textContent = new Date().getFullYear();
+    document.getElementById('contact-form').addEventListener('submit', function(ev){
+      ev.preventDefault();
+      var form = ev.target;
+      alert('Gracias, ' + (form.nombre.value || '') + ' — el formulario es de ejemplo.');
+      form.reset();
+    });
+  </script>
+</body>
+</html>

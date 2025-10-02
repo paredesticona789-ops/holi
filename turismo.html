@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Turismo Bolivia — Descubre Bolivia</title>
+  <meta name="description" content="Página de turismo en Bolivia: Salar de Uyuni, La Paz, Madidi, Sucre y más.">
+  
+  <style>
+    :root{
+      --bg:#f7fafc; --card:#ffffff; --accent:#0ea5a4; --muted:#6b7280; --glass: rgba(255,255,255,0.6);
+      --radius:14px; --pad:18px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0; font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background:linear-gradient(180deg,#f0f9f9 0%, var(--bg) 60%); color:#0f172a;
+      -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+    }
+    a{color:var(--accent); text-decoration:none}
+    header{
+      position:sticky; top:0; backdrop-filter: blur(6px); background: rgba(255,255,255,0.6);
+      border-bottom:1px solid rgba(15, 23, 42, 0.04);
+      z-index:50;
+    }
+    .container{max-width:1100px; margin:0 auto; padding:20px;}
+    .nav{display:flex; align-items:center; justify-content:space-between; gap:12px}
+    .brand{font-weight:800; letter-spacing:-0.5px}
+    nav a{margin-left:14px; font-weight:600; color: #094948}
+    .hero{
+      display:grid; grid-template-columns:1fr; gap:18px; align-items:center;
+      padding:48px 20px; border-radius:18px; margin-top:18px; background:
+      linear-gradient(135deg, rgba(14,165,164,0.08), rgba(14,165,164,0.02));
+    }
+    .hero-grid{display:grid; gap:18px}
+    .hero h1{font-size:clamp(26px,6vw,44px); margin:0 0 6px; line-height:1.02}
+    .hero p{margin:0; color:var(--muted)}
+    .btn{display:inline-block;padding:10px 16px;border-radius:10px;font-weight:700;background:var(--accent);color:white}
+    .secondary{background:transparent;border:1px solid rgba(15,23,42,0.06); padding:9px 14px;border-radius:10px}
+    .grid{display:grid; gap:18px}
+    .cards{grid-template-columns:repeat(1,1fr)}
+    .card{background:var(--card); border-radius:12px; overflow:hidden; box-shadow: 0 6px 18px rgba(2,6,23,0.06); display:flex; flex-direction:column}
+    .card img{width:100%; height:180px; object-fit:cover; display:block}
+    .card-body{padding:14px}
+    .meta{font-size:13px;color:var(--muted); margin-top:6px}
+    .actions{display:flex; justify-content:space-between; align-items:center; margin-top:12px}
+    .tips{background:linear-gradient(180deg,#ffffff,#f8fffe); padding:18px; border-radius:12px}
+    .gallery{display:grid; grid-template-columns:repeat(2,1fr); gap:8px}
+    .gallery img{width:100%; height:120px; object-fit:cover; border-radius:8px}
+    footer{padding:28px 20px; color:var(--muted); margin-top:28px}
+    form input, form textarea{
+      width:100%; padding:10px 12px; border-radius:8px; border:1px solid #e6eef0; margin-top:8px;
+      font-size:14px;
+    }
+    .row{display:flex; gap:12px}
+    @media(min-width:720px){
+      .hero{grid-template-columns:1fr 480px; padding:48px}
+      .cards{grid-template-columns:repeat(3,1fr)} /* Ahora 3 columnas */
+      .gallery{grid-template-columns:repeat(4,1fr)}
+      .grid-2{grid-template-columns:1fr 1fr}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div style="display:flex;align-items:center;gap:12px">
+        <div class="brand">Turismo Bolivia</div>
+        <div style="font-size:13px;color:var(--muted)">Naturaleza · Cultura · Aventura</div>
+      </div>
+      <nav>
+        <a href="#destinos">Destinos</a>
+        <a href="#consejos">Consejos</a>
+        <a href="#galeria">Galería</a>
+        <a href="#contacto" class="btn" style="margin-left:10px">Contacto</a>
+      </nav>
+    </div>
+  </header>
+  <main class="container" style="padding-bottom:28px">
+    <!-- Hero -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-grid">
+        <h1 id="hero-title">Descubre Bolivia: paisajes únicos y cultura viva</h1>
+        <p>Explora el Salar de Uyuni, los mercados de La Paz, la Amazonía en Madidi y la historia en Sucre. Planes sostenibles y guías locales para una experiencia segura.</p>
+        <div style="margin-top:12px">
+          <a class="btn" href="#destinos">Ver destinos</a>
+          <a class="secondary" href="#galeria" style="margin-left:10px">Ver galería</a>
+        </div>
+      </div>
+
+      <div style="border-radius:16px; overflow:hidden; box-shadow:0 10px 30px rgba(2,6,23,0.08)">
+        <img src="img/CHUQUISACA.jpg" alt="Salar de Uyuni" style="width:100%;height:100%;max-height:420px;object-fit:cover;display:block">
+      </div>
+    </section>
+
+    <!-- Destinations -->
+    <section id="destinos" style="margin-top:28px">
+      <h2 style="margin:0 0 6px">Destinos destacados</h2>
+      <p style="margin:0 0 12px;color:var(--muted)">Algunos lugares que no puedes perderte en Bolivia.</p>
+
+      <div class="grid cards" role="list">
+        <!-- Card 1 -->
+        <article class="card" role="listitem" aria-label="Salar de Uyuni">
+          <img src="img/POTOSI.jpg" alt="Salar de Uyuni, Potosí">
+          <div class="card-body">
+            <strong>Salar de Uyuni</strong>
+            <div class="meta">Potosí · Paisaje único</div>
+            <p style="margin-top:10px;color:var(--muted);font-size:14px">El mayor salar del mundo, espejos naturales y atardeceres inolvidables.</p>
+            <div class="actions">
+              <a href="potosi.html">Más info →</a>
+              <a href="#contacto" class="btn" style="margin-left:10px">Ver tours</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="card" role="listitem" aria-label="La Paz">
+          <img src="img/LA PAZ.jpg" alt="La Paz">
+          <div class="card-body">
+            <strong>La Paz</strong>
+            <div class="meta">Capital administrativa · Cultura</div>
+            <p style="margin-top:8px;color:var(--muted)">Teleféricos, mercados tradicionales y vida urbana a gran altura.</p>
+            <div class="actions">
+              <a href="lapaz.html">Más info →</a>
+              <a href="#contacto" class="btn" style="margin-left:10px">Ver tours</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="card" role="listitem" aria-label="Madidi">
+          <img src="img/BENI.jpg" alt="Madidi">
+          <div class="card-body">
+            <strong>Madidi</strong>
+            <div class="meta">Amazonas · Biodiversidad</div>
+            <p style="margin-top:8px;color:var(--muted)">Selva tropical con una de las mayores biodiversidades del planeta.</p>
+            <div class="actions">
+              <a href="beni.html">Más info →</a>
+              <a href="#contacto" class="btn" style="margin-left:10px">Ver tours</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 4 -->
+        <article class="card" role="listitem" aria-label="Sucre">
+          <img src="img/CHUQUISACA.jpg" alt="Sucre">
+          <div class="card-body">
+            <strong>Sucre</strong>
+            <div class="meta">Patrimonio · Historia</div>
+            <p style="margin-top:8px;color:var(--muted)">La Ciudad Blanca: arquitectura, museos y paseos ideales.</p>
+            <div class="actions">
+              <a href="chuquisaca.html">Más info →</a>
+              <a href="#contacto" class="btn" style="margin-left:10px">Ver tours</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 5 -->
+        <article class="card" role="listitem" aria-label="Copacabana">
+          <img src="img/ORURO.jpg" alt="Copacabana">
+          <div class="card-body">
+            <strong>Copacabana</strong>
+            <div class="meta">La Paz · Lago Titicaca</div>
+            <p style="margin-top:8px;color:var(--muted)">Pueblo mágico a orillas del Titicaca, famoso por su santuario y paisajes.</p>
+            <div class="actions">
+              <a href="oruro.html">Más info →</a>
+              <a href="#contacto" class="btn" style="margin-left:10px">Ver tours</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 6 -->
+        <article class="card" role="listitem" aria-label="Potosí">
+          <img src="img/PANDO.jpg" alt="Cerro Rico de Potosí">
+          <div class="card-body">
+            <strong>Potosí</strong>
+            <div class="meta">Historia · Patrimonio</div>
+            <p style="margin-top:8px;color:var(--muted)">Cerro Rico, minas coloniales y un pasado que marcó la historia mundial.</p>
+            <div class="actions">
+              <a href="pando.html">Más info →</a>
+              <a href="#contacto" class="btn" style="margin-left:10px">Ver tours</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 7 -->
+        <article class="card" role="listitem" aria-label="Santa Cruz">
+          <img src="img/SANTA CRUZ.jpg" alt="Santa Cruz">
+          <div class="card-body">
+            <strong>Santa Cruz</strong>
+            <div class="meta">Modernidad · Naturaleza</div>
+            <p style="margin-top:8px;color:var(--muted)">Ciudad moderna, cercana a parques naturales como Amboró y Samaipata.</p>
+            <div class="actions">
+              <a href="santacruz.html">Más info →</a>
+              <a href="#contacto" class="btn" style="margin-left:10px">Ver tours</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 8 -->
+        <article class="card" role="listitem" aria-label="Cochabamba">
+          <img src="img/COCHBAMBA.jpg" alt="Cochabamba">
+          <div class="card-body">
+            <strong>Cochabamba</strong>
+            <div class="meta">Gastronomía · Cultura</div>
+            <p style="margin-top:8px;color:var(--muted)">La ciudad de la eterna primavera y capital gastronómica de Bolivia.</p>
+            <div class="actions">
+              <a href="cochabamba.html">Más info →</a>
+              <a href="#contacto" class="btn" style="margin-left:10px">Ver tours</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 9 -->
+        <article class="card" role="listitem" aria-label="Tarija">
+          <img src="img/TARIJA.jpg" alt="Tarija">
+          <div class="card-body">
+            <strong>Tarija</strong>
+            <div class="meta">Vinos · Valle</div>
+            <p style="margin-top:8px;color:var(--muted)">Viñedos, clima cálido y rutas del vino en el sur de Bolivia.</p>
+            <div class="actions">
+              <a href="tarija.html">Más info →</a>
+              <a href="#contacto" class="btn" style="margin-left:10px">Ver tours</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Tips & Map -->
+    <section id="consejos" style="margin-top:28px; display:grid; gap:18px" class="grid-2">
+      <div class="tips">
+        <h3 style="margin:0 0 8px">Consejos para tu viaje</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--muted);line-height:1.6">
+          <li>Aclimátate a la altura: descansa las primeras 48 horas en ciudades altas.</li>
+          <li>Respeta las costumbres locales y a las comunidades.</li>
+          <li>Lleva ropa por capas: la temperatura cambia por la altitud.</li>
+          <li>Contrata guías locales y operadores certificados.</li>
+        </ul>
+      </div>
+
+      <div style="border-radius:12px; overflow:hidden; box-shadow:0 6px 18px rgba(2,6,23,0.06)">
+        <!-- Mapa embebido (Google Maps) -->
+        <iframe
+          title="Mapa Bolivia"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1206803.8242567466!2d-69.6305088815058!3d-17.12538521380092!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935f6d6911c1c7a9%3A0x1a2b3c4d5e6f7a8!2sBolivia!5e0!3m2!1ses!2sbo!4v1610000000000"
+          style="border:0; width:100%; height:100%; min-height:320px;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </section>
+
+    <!-- esta es la galeria donde dice img pongan imagenes  -->
+    <section id="galeria" style="margin-top:28px">
+      <h3 style="margin:0 0 6px">Galería</h3>
+      <p style="margin:0 0 12px;color:var(--muted)">Fotos inspiradoras para tu viaje.</p>
+      <div class="gallery" style="margin-top:8px">
+        <img src="img/ORURO.jpg" alt="Salar">
+        <img src="img/LA PAZ.jpg" alt="La Paz skyline">
+        <img src="img/BENI.jpg" alt="Madidi selva">
+        <img src="img/CHUQUISACA.jpg" alt="Sucre">
+      </div>
+    </section>
+    <section id="contacto" style="margin-top:28px">
+      <h3 style="margin:0 0 6px">Contacto</h3>
+      <p style="margin:0 0 12px;color:var(--muted)">Envíanos tus dudas y te ayudamos a planear tu viaje.</p>
+      <form id="contact-form" style="background:var(--card); padding:16px; border-radius:12px; box-shadow:0 6px 18px rgba(2,6,23,0.04);">
+        <div class="row" style="margin-bottom:10px">
+          <div style="flex:1">
+            <label>Nombre
+              <input type="text" name="nombre" placeholder="Tu nombre" required>
+            </label>
+          </div>
+          <div style="flex:1">
+            <label>Email
+              <input type="email" name="email" placeholder="correo@gmail.com" required>
+            </label>
+          </div>
+        </div>
+        <label>Asunto
+          <input type="text" name="asunto" placeholder="Reserva / Información" required>
+        </label>
+        <label>Mensaje
+          <textarea name="mensaje" rows="5" placeholder="¿En qué te podemos ayudar?" required></textarea>
+        </label>
+        <div style="margin-top:12px; display:flex; gap:8px; justify-content:flex-end">
+          <button type="reset" class="secondary">Limpiar</button>
+          <button type="submit" class="btn">Enviar</button>
+        </div>
+      </form>
+    </section>
+  </main>
+  <footer>
+    <div class="container" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap">
+      <small>© <span id="year"></span> Turismo Bolivia — Turismo responsable</small>
+      <div style="display:flex;gap:12px;margin-top:8px">
+        <a href="#" aria-label="Términos">Términos</a>
+        <a href="#" aria-label="Privacidad">Privacidad</a>
+      </div>
+    </div>
+  </footer>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('contact-form').addEventListener('submit', function(ev){
+      ev.preventDefault();
+      var form = ev.target;
+      var data = {
+        nombre: form.nombre.value,
+        email: form.email.value,
+        asunto: form.asunto.value,
+        mensaje: form.mensaje.value
+      };
+      alert('Gracias, ' + data.nombre + ' — el formulario es de ejemplo. Para enviar datos necesitas configurar un servicio (puedo ayudarte a integrarlo).');
+      form.reset();
+    });
+  </script>
+</body>
+</main>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.querySelector('form')?.addEventListener('submit', function(ev){
+      ev.preventDefault();
+      alert('Gracias — este formulario es de ejemplo. Para enviar datos necesitas configurar un servicio.');
+    });
+  </script>
+</body>
+</html>
